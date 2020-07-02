@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif; }
+
+.container {
+  margin: auto;
+  padding: 0 50px; }
+
+main .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 460px;
+  overflow: hidden; }
+  main .banner:hover::after {
+    opacity: 1; }
+  main .banner:hover .text h2 {
+    opacity: 1;
+    transform: none; }
+  main .banner:hover .text p {
+    opacity: 1;
+    transform: none; }
+  main .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.6s;
+    opacity: 0; }
+  main .banner video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; }
+  main .banner .text {
+    position: absolute;
+    text-align: center;
+    z-index: 10; }
+    main .banner .text h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: 0.8s; }
+    main .banner .text p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #eee;
+      opacity: 0;
+      transform: translateY(80px);
+      transition: 0.8s 0.05s; }
+@keyframes effect {
+  0% {
+    transform: none; }
+  50% {
+    transform: rotate(-15deg); }
+  100% {
+    transform: none; } }
+main .bestseller {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  main .bestseller .item {
+    position: absolute;
+    top: -186px;
+    display: flex; }
+    main .bestseller .item .list {
+      position: relative;
+      width: 320px;
+      height: 384px; }
+      main .bestseller .item .list:hover img {
+        animation: effect 1s; }
+      main .bestseller .item .list:hover .label {
+        transform: none;
+        opacity: 1; }
+      main .bestseller .item .list img {
+        transform-origin: 50% 70%;
+        max-width: 100%; }
+      main .bestseller .item .list .label {
+        position: absolute;
+        top: 91px;
+        left: 244px;
+        width: 93px;
+        height: 52px;
+        background-image: url("./images/pickme.png");
+        background-repeat: no-repeat;
+        background-position: 10% 0;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.skill-bar {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: #f7f7f7; }
+  .skill-bar .design {
+    width: 540px;
+    padding: 24px 49px 24px 49px;
+    border: 1px solid #eee;
+    background: #ffffff; }
+    .skill-bar .design h4 {
+      padding: 0 15px 20px;
+      text-transform: capitalize; }
+    .skill-bar .design .list p {
+      font-size: 14px;
+      padding: 0 15px; }
+    .skill-bar .design .list .progress {
+      height: 8px;
+      width: 400px;
+      background: #eee;
+      margin: 15px;
+      border-radius: 4px; }
+      .skill-bar .design .list .progress:hover .gauge {
+        width: 80%;
+        overflow: visible; }
+      .skill-bar .design .list .progress .gauge {
+        height: 8px;
+        width: 0;
+        background: #ff5252;
+        border-radius: 4px;
+        position: relative;
+        transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        overflow: hidden; }
+        .skill-bar .design .list .progress .gauge .label {
+          position: absolute;
+          right: 0;
+          bottom: calc(100% + 5px);
+          background: #ff5252;
+          color: #fff;
+          font-size: 12px;
+          padding: 3px 7px; }
+
+/*# sourceMappingURL=style.css.map */
