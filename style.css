@@ -1,168 +1,80 @@
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box; }
+/*
+Error: Undefined mixin 'screen-lg'.
+        on line 218 of style.scss, in `screen-lg'
+        from line 218 of style.scss
 
-body {
-  font-family: 'Noto Sans KR', sans-serif; }
+213: 
+214:   .container {
+215:     max-width: 1230px;
+216:     margin: 0 auto;
+217:     padding: 0 15px;
+218:     @include screen-lg {
+219:       max-width: 992px;
+220:     }
+221:     @include screen-md {
+222:       max-width: 768px;
+223:     }
 
-.container {
-  margin: auto;
-  padding: 0 50px; }
-
-main .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 460px;
-  overflow: hidden; }
-  main .banner:hover::after {
-    opacity: 1; }
-  main .banner:hover .text h2 {
-    opacity: 1;
-    transform: none; }
-  main .banner:hover .text p {
-    opacity: 1;
-    transform: none; }
-  main .banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.4);
-    transition: opacity 0.6s;
-    opacity: 0; }
-  main .banner video {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%; }
-  main .banner .text {
-    position: absolute;
-    text-align: center;
-    z-index: 10; }
-    main .banner .text h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-      color: #fff;
-      opacity: 0;
-      transform: translateY(60px);
-      transition: 0.8s; }
-    main .banner .text p {
-      font-size: 18px;
-      line-height: 1.5;
-      color: #eee;
-      opacity: 0;
-      transform: translateY(80px);
-      transition: 0.8s 0.05s; }
-@keyframes effect {
-  0% {
-    transform: none; }
-  50% {
-    transform: rotate(-15deg); }
-  100% {
-    transform: none; } }
-main .bestseller {
-  display: flex;
-  justify-content: center;
-  position: relative; }
-  main .bestseller .item {
-    position: absolute;
-    top: -186px;
-    display: flex; }
-    main .bestseller .item .list {
-      position: relative;
-      width: 320px;
-      height: 384px; }
-      main .bestseller .item .list:hover img {
-        animation: effect 1s; }
-      main .bestseller .item .list:hover .label {
-        transform: none;
-        opacity: 1; }
-      main .bestseller .item .list img {
-        transform-origin: 50% 70%;
-        max-width: 100%; }
-      main .bestseller .item .list .label {
-        position: absolute;
-        top: 91px;
-        left: 244px;
-        width: 93px;
-        height: 52px;
-        background-image: url("./images/pickme.png");
-        background-repeat: no-repeat;
-        background-position: 10% 0;
-        opacity: 0;
-        transform: translateY(-40px);
-        transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
-
-.skill-bar {
-  margin-top: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  background: #f7f7f7; }
-  .skill-bar .design {
-    width: 540px;
-    padding: 24px 49px 24px 49px;
-    border: 1px solid #eee;
-    background: #ffffff; }
-    .skill-bar .design h4 {
-      padding: 0 15px 20px;
-      text-transform: capitalize; }
-    .skill-bar .design .list p {
-      font-size: 14px;
-      padding: 0 15px; }
-    .skill-bar .design .list .progress {
-      height: 8px;
-      width: 400px;
-      background: #eee;
-      margin: 15px;
-      border-radius: 4px; }
-      .skill-bar .design .list .progress:hover .gauge {
-        width: 80%;
-        overflow: visible; }
-      .skill-bar .design .list .progress .gauge {
-        height: 8px;
-        width: 0;
-        background: #ff5252;
-        border-radius: 4px;
-        position: relative;
-        transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-        overflow: hidden; }
-        .skill-bar .design .list .progress .gauge .label {
-          position: absolute;
-          right: 0;
-          bottom: calc(100% + 5px);
-          background: #ff5252;
-          color: #fff;
-          font-size: 12px;
-          padding: 3px 7px; }
-
-.grid {
-  margin: 100px 0; }
-  .grid .container {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding: 0 15px; }
-    .grid .container ul {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap; }
-      .grid .container ul li {
-        padding: 20px;
-        width: 25%; }
-        .grid .container ul li .item {
-          height: 300px;
-          background: #b9adc6; }
-
-@media only screen and (max-width: 768px) {
-  .grid li {
-    width: 50%; } }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+style.scss:218:in `screen-lg'
+style.scss:218
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `with_mixin'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+F:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+F:/Ruby25-x64/bin/sass:23:in `load'
+F:/Ruby25-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'screen-lg'.\A         on line 218 of style.scss, in `screen-lg'\A         from line 218 of style.scss\A \A 213: \A 214:   .container {\A 215:     max-width: 1230px;\A 216:     margin: 0 auto;\A 217:     padding: 0 15px;\A 218:     @include screen-lg {\A 219:       max-width: 992px;\A 220:     }\A 221:     @include screen-md {\A 222:       max-width: 768px;\A 223:     }"; }
